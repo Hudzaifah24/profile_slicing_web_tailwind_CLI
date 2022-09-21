@@ -1,0 +1,136 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.place-image {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+.place-image img {
+    width: 201px;
+    height: 201px;
+    border-radius: 200px;
+}
+.place-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 26px;
+}
+.place-title .name {
+    margin-bottom: 16px;
+    color: #343A40;
+    font-size: 40px;
+    font-weight: 700;
+}
+.place-title .title {
+    font-size: 25px;
+    color: #343A40;
+    line-height: 38px;
+}
+.line-center {
+    margin-top: 43px;
+}
+.place-content {
+    margin: auto;
+}
+.article-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.article-content .title-content {
+    color: #343A40;
+    margin-top: 26px;
+    font-weight: 600;
+    font-size: 32px;
+}
+.article-content .subtitle-content {
+    width: 768px;
+    line-height: 37.5px;
+    text-align: center;
+    color: #343A40;
+    margin-top: 26px;
+    font-size: 25px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+.card-content {
+    margin-top: 46px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.card-content .card {
+    width: 445px;
+    background-color: #ffffff;
+    border: 1px solid #9D9D9D;
+    display: flex;
+    flex-direction: column;
+    border-radius: 35px;
+    z-index: 2;
+}
+.card-content .card .title-card {
+    color: #343A40;
+    padding: 24px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+#frontend {
+    padding: 24px;
+    padding-top: 0px;
+}
+#backend {
+    padding: 24px;
+    padding-top: 0px;
+}
+
+/* aksesories */
+.aksesories-one {
+    width: 112px;
+    height: 110px;
+    position: absolute;
+    top: 122px;
+    left: 133px;
+    z-index: 1;
+}
+.aksesories-two {
+    width: 187px;
+    height: 180px;
+    position: absolute;
+    bottom: 87px;
+    right: 68px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    [class*="aksesories"] {
+        display: none;
+    }
+    .container {
+        padding: 63px 0px;
+    }
+    .article-content .subtitle-content {
+        width: 100%;
+    }
+    .card-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-content .card {
+        width: 100%;
+        margin: 10px 0px;
+        padding: 0px;
+    }
+}

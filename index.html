@@ -1,0 +1,93 @@
+<!-- my name is HUDZAIFAH -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+        <link rel="stylesheet" href="./dist/output.css">
+        <title>Slicing Design to Web Using Tailwind</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .container {
+                padding: 63px 66px;
+            }
+
+            @media only screen and (max-width: 800px) {
+                [class*="aksesories"] {
+                    display: none;
+                }
+                .container {
+                    padding: 63px 0px;
+                }
+            }
+        </style>
+    </head>
+    <body class="relative">
+        <!-- Profile -->
+        <div class="container mx-auto">
+            <!-- image Profile -->
+            <div class="w-52 h-52 rounded-full mx-auto">
+                <img class="w-full h-full rounded-full" src="assets/img/profile.jpg" alt="profile">
+            </div>
+
+            <!-- Title -->
+            <div class="text-center text-GD mt-[26px]">
+                <span class="block font-bold text-4xl">Hudzaifah</span>
+                <span class="block mt-[16px] text-2xl">Fullstack Developer</span>
+                <span class="block mt-[10px] text-2xl">Developer</span>
+            </div>
+            
+            <!-- Garis -->
+            <hr class="mt-[26px] border border-gray-300">
+            
+            <div class="place-content mt-[26px]">
+                <!-- article -->
+                <div class="text-center">
+                    <span class="block text-3xl font-bold text-GD mb-[26px]">Overview</span>
+                    <span class="block text-2xl text-GD w-2/3 text-center mx-auto leading-relaxed">I am a student with Full stack Developer skills, who continues to thirst for knowledge.</span>
+                </div>
+                
+                <!-- card -->
+                <div class="mt-[26px] flex flex-col md:flex-row justify-around gap-5">
+                    <div class="border border-gray-400 bg-white z-20 rounded-3xl p-6 w-[445px] mx-auto">
+                        <span class="block text-2xl font-bold text-GD mb-3">Frontend</span>
+                        <span id="frontend" class="block"></span>
+                    </div>
+                    <div class="border border-gray-400 bg-white z-20 rounded-3xl p-6 w-[445px] mx-auto">
+                        <span class="block text-2xl font-bold text-GD mb-3">Backend</span>
+                        <span id="backend" class="block"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- aksesoris -->
+        <img class="aksesories absolute w-28 h-28 top-28 left-32" src="assets/img/aksesoris1.png">
+        <img class="aksesories absolute w-48 h-44 bottom-20 right-20" src="assets/img/aksesoris2.png">
+
+        <script>
+            const frontend = ['Html', 'Css', 'Js', 'Vue', 'Nuxt', 'Quasar'];
+            const backend = ['Php', 'Laravel', 'Codeigniter', 'Mysql', 'MongoDb'];
+
+            let valueFrontend = "";
+            for (let i = 1; i < frontend.length; i++) {
+                valueFrontend += i + '. ' + frontend[i] + '<br>';
+            }
+
+            let valueBackend = "";
+            for (let i = 1; i < backend.length; i++) {
+                valueBackend += i + '. ' + backend[i] + '<br>';
+            }
+
+            document.querySelector('#frontend').innerHTML = valueFrontend;
+            document.querySelector('#backend').innerHTML = valueBackend;
+        </script>
+    </body>
+</html>
